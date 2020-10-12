@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Element from "./Element";
+import Component from "./Component";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-          <Element />
+          <Component library="React" /> {/* Actually this is a Component */}
         </a>
       </header>
     </div>
