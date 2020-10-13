@@ -3,8 +3,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import Component from "./Component";
 import UnorderedList from "./UnorderedList";
+import Element from "./Element";
+import IngredientList from "./IngredientList";
 function App() {
   const list = ["Hamburgers", "Hot Dogs"];
+  const items = ["Onions", "Tomatoes"];
 
   return (
     <div className="App">
@@ -22,6 +25,8 @@ function App() {
           Learn React
           <Component library="React" />
           <UnorderedList list={list}></UnorderedList>
+          <Element />
+          <IngredientList items={items}></IngredientList>
           {/* Actually  this is a Component */}
         </a>
       </header>
