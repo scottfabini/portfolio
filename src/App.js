@@ -25,13 +25,12 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-          <Component library="React" />
-          <UnorderedList list={list}></UnorderedList>
-          <Element />
-          <IngredientList items={items}></IngredientList>
-          <Stars stars={2} />
-          {/* Actually  this is a Component */}
         </a>
+        <Component library="React" />
+        <UnorderedList list={list}></UnorderedList>
+        <Element />
+        <IngredientList items={items}></IngredientList>
+        <Stars stars={2} />
       </header>
     </div>
   );
