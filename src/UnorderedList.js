@@ -8,16 +8,15 @@ import React from "react";
 import "./index.css";
 
 // This is a Component built on JSX
-function Component(props) {
+function UnorderedList(props) {
   console.log(props);
   return (
     <ul>
-      List
-      <li>Welcome to {props.library}!</li>
-      <li>Hot Dog</li>
-      <li>Hamburger</li>
+      {props.list.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
     </ul>
   );
 }
 
-export default Component;
+export default UnorderedList;

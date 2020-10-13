@@ -2,8 +2,10 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Component from "./Component";
-
+import UnorderedList from "./UnorderedList";
 function App() {
+  const list = ["Hamburgers", "Hot Dogs"];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +20,9 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-          <Component library="React" /> {/* Actually this is a Component */}
+          <Component library="React" />
+          <UnorderedList list={list}></UnorderedList>
+          {/* Actually  this is a Component */}
         </a>
       </header>
     </div>
