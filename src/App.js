@@ -5,6 +5,8 @@ import Component from "./Component";
 import UnorderedList from "./UnorderedList";
 import Element from "./Element";
 import IngredientList from "./IngredientList";
+import Stars from "./StarRating";
+
 function App() {
   const list = ["Hamburgers", "Hot Dogs"];
   const items = ["Onions", "Tomatoes"];
@@ -27,6 +29,7 @@ function App() {
           <UnorderedList list={list}></UnorderedList>
           <Element />
           <IngredientList items={items}></IngredientList>
+          <Stars stars={2} />
           {/* Actually  this is a Component */}
         </a>
       </header>
