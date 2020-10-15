@@ -6,13 +6,29 @@ import UnorderedList from "./UnorderedList";
 import Element from "./Element";
 import IngredientList from "./IngredientList";
 import StarRating from "./StarRating";
+import initialColorData from "./color-data.json";
+import ColorList from "./ColorList.js";
+import { useState } from "react";
 
 function App() {
   const list = ["Hamburgers", "Hot Dogs"];
   const items = ["Onions", "Tomatoes"];
+  const initialRating = 2;
+  const [colors, setColors] = useState(initialColorData);
+  const [rating, setRating] = useState(initialRating)
 
   return (
     <div className="App">
+      <ColorList colors={colors} 
+      onRemoveColor={id => {
+        const newColors = colors.filter(color => color.id !== id);
+        setColors(newColors);
+      }}
+
+      onRate={(id, rate) => {
+
+      }}
+      />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -30,7 +46,9 @@ function App() {
         <UnorderedList list={list}></UnorderedList>
         <Element />
         <IngredientList items={items}></IngredientList>
-        <StarRating stars={2} />
+        <StarRating selectedStars={rating} onRate={(newRating) => {
+          setRating(newRating);
+      }}/>
       </header>
     </div>
   );
