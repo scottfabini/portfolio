@@ -3,11 +3,11 @@ import "./index.css";
 import { FaStar } from "react-icons/fa";
 import { useState } from "react";
 
-export default function StarRating({ totalStars = 5 }) {
-  const [selectedStars, setSelectedStars] = useState(3);
+export default function StarRating({ totalStars = 5, style = {}, ...props }) {
+  const [selectedStars, setSelectedStars] = useState(0);
 
   return (
-    <>
+    <div style={{ padding: "5px", ...style }} {...props}>
       {[...Array(totalStars)].map((n, i) => (
         <Star
           key={i}
@@ -18,7 +18,7 @@ export default function StarRating({ totalStars = 5 }) {
       <p>
         {selectedStars} of {totalStars} stars
       </p>
-    </>
+    </div>
   );
 }
 
