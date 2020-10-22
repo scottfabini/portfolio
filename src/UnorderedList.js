@@ -9,7 +9,7 @@ import "./index.css";
 
 // This is a Component built on JSX
 function UnorderedList(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <ul>
       {props.list.map((item) => (

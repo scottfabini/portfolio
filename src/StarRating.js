@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import { FaStar } from "react-icons/fa";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function StarRating({ totalStars = 5, selectedStars = 0, style = {}, onRate = f => f, ...props }) {
   // Stateless way
@@ -11,7 +11,10 @@ export default function StarRating({ totalStars = 5, selectedStars = 0, style = 
         <Star
           key={i}
           selected={i < selectedStars}
-          onSelect={() => onRate(i + 1)}
+          onSelect={() => {
+            console.log("click detected"); 
+            onRate(i + 1)
+          }}
         />
       ))}
       <p>

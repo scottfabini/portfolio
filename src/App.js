@@ -19,15 +19,24 @@ function App() {
 
   return (
     <div className="App">
-      <ColorList colors={colors} 
+      <ColorList 
+      colors={colors} 
+      onRateColor={(id, rating) => {
+        // const newRate = rate.filter(rating => rating.id !== id)
+        const newColors = colors.map( color => 
+          color.id === id ? { ...color, rating} : color
+        );
+        console.log(newColors);
+        setColors(newColors);
+      }}
       onRemoveColor={id => {
         const newColors = colors.filter(color => color.id !== id);
+        console.log(newColors);
         setColors(newColors);
       }}
 
-      onRate={(id, rate) => {
-
-      }}
+      
+      
       />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
