@@ -10,6 +10,7 @@ import StarRating from './StarRating';
 import initialColorData from './color-data.json';
 import ColorList from './ColorList';
 import AddColorForm from './AddColorForm';
+import AddColorFormCC from './AddColorFormCC';
 
 function App() {
   const list = ['Hamburgers', 'Hot Dogs'];
@@ -18,18 +19,27 @@ function App() {
   const [colors, setColors] = useState(initialColorData);
   const [rating, setRating] = useState(initialRating);
 
+  const createColor = (title, color) => {
+    const newColor = {
+      id: v4(),
+      title,
+      color,
+      rating: 0,
+    };
+    const newColors = [...colors, newColor];
+    setColors(newColors);
+  };
+
   return (
     <div className="App">
+      <AddColorFormCC
+        onNewColor={(title, color) => {
+          createColor(title, color);
+        }}
+      />
       <AddColorForm
         onNewColor={(title, color) => {
-          const newColor = {
-            id: v4(),
-            title,
-            color,
-            rating: 0,
-          };
-          const newColors = [...colors, newColor];
-          setColors(newColors);
+          createColor(title, color);
         }}
       />
       <ColorList

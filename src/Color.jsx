@@ -4,10 +4,15 @@ import PropTypes from 'prop-types';
 import StarRating from './StarRating';
 
 export default function Color({
-  id, title, color, rating, onRemove = (f) => f, onRate = (f) => f,
+  id,
+  title,
+  color,
+  rating,
+  onRemove = (f) => f,
+  onRate = (f) => f,
 }) {
   Color.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
