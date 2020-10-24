@@ -17,12 +17,7 @@ function Component({ library }) {
   return (
     <ul>
       List
-      <li>
-        Welcome to
-        {' '}
-        {library}
-        !
-      </li>
+      <li>Welcome to {library}!</li>
       <li>Hot Dog</li>
       <li>Hamburger</li>
     </ul>

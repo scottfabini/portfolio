@@ -23,13 +23,7 @@ export default function StarRating({
         />
       ))}
       <p>
-        {selectedStars}
-        {' '}
-        of
-        {' '}
-        {totalStars}
-        {' '}
-        stars
+        {selectedStars} of {totalStars} stars
       </p>
     </>
   );
