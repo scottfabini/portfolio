@@ -1,27 +1,38 @@
-import React from "react";
-import "./index.css";
-import { FaStar } from "react-icons/fa";
+import React from 'react';
+import './index.css';
+import { FaStar } from 'react-icons/fa';
 // import { useState } from "react";
 
-export default function StarRating({ totalStars = 5, selectedStars = 0, style = {}, onRate = f => f, ...props }) {
+export default function StarRating({
+  totalStars = 5,
+  selectedStars = 0,
+  style = {},
+  onRate = (f) => f,
+}) {
   // Stateless way
   return (
     <>
-    {[...Array(totalStars)].map((n, i) => (
+      {[...Array(totalStars)].map((n, i) => (
         <Star
           key={i}
           selected={i < selectedStars}
           onSelect={() => {
-            console.log("click detected"); 
-            onRate(i + 1)
+            onRate(i + 1);
           }}
+          style={style}
         />
       ))}
       <p>
-        {selectedStars} of {totalStars} stars
+        {selectedStars}
+        {' '}
+        of
+        {' '}
+        {totalStars}
+        {' '}
+        stars
       </p>
     </>
-  )
+  );
 
   // Stateful way
   // const [selectedStars, setSelectedStars] = useState(0);
@@ -51,5 +62,5 @@ export default function StarRating({ totalStars = 5, selectedStars = 0, style = 
 // }
 
 const Star = ({ selected = false, onSelect = (f) => f }) => (
-  <FaStar color={selected ? "red" : "grey"} onClick={onSelect} />
+  <FaStar color={selected ? 'red' : 'grey'} onClick={onSelect} />
 );
