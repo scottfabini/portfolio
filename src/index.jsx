@@ -1,10 +1,9 @@
-import React, { createContext, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
-import ColorProvider from './hooks';
-import colorData from './color-data';
 import * as serviceWorker from './serviceWorker';
+import AudioProvider from './AudioProvider';
 
 // ReactDOM.render(
 //   React.createElement(
@@ -19,9 +18,9 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   [
     <React.StrictMode>
-      <ColorProvider>
+      <AudioProvider>
         <App />
-      </ColorProvider>
+      </AudioProvider>
     </React.StrictMode>,
   ],
   document.getElementById('root'),

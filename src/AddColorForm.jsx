@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
-import { useInput, useColors, ColorContext } from './hooks';
+import React from 'react';
+import { useInput, useColors } from './hooks';
 
 export default function AddColorForm({ onNewColor = (f) => f }) {
   const [title, resetTitle] = useInput('');
   const [color, resetColor] = useInput('#000000');
-  // const { addColor } = useContext(ColorContext);
-  const { colors, addColor, removeColor, rateColor } = useColors();
+  const { addColor } = useColors();
 
   // This is everything we do when the Submit button is pushed.
   const submit = (e) => {

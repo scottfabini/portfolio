@@ -4,9 +4,9 @@
     "es6": true
   },
   "extends": [
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "airbnb"
+    // "plugin:react/recommended",
+    // "plugin:react-hooks/recommended",
+    // "airbnb"
     // "prettier"
   ],
   "globals": {
