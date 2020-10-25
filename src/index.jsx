@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
+import ColorProvider from './hooks';
+import colorData from './color-data';
 import * as serviceWorker from './serviceWorker';
 
 // ReactDOM.render(
@@ -17,7 +19,9 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   [
     <React.StrictMode>
-      <App />
+      <ColorProvider>
+        <App />
+      </ColorProvider>
     </React.StrictMode>,
   ],
   document.getElementById('root'),

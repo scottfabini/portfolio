@@ -1,16 +1,18 @@
-import React from 'react';
-import { useInput } from './hooks';
+import React, { useContext } from 'react';
+import { useInput, useColors, ColorContext } from './hooks';
 
 export default function AddColorForm({ onNewColor = (f) => f }) {
   const [title, resetTitle] = useInput('');
   const [color, resetColor] = useInput('#000000');
+  // const { addColor } = useContext(ColorContext);
+  const { colors, addColor, removeColor, rateColor } = useColors();
 
   // This is everything we do when the Submit button is pushed.
   const submit = (e) => {
     e.preventDefault();
     // here is wehere we see that onNewColor() takes two arguments: a title and a color
     // the onNewColor function passed down from App.jsx creates the corresponding title and color in the state.
-    onNewColor(title.value, color.value);
+    addColor(title.value, color.value);
     resetTitle();
     resetColor();
   };
