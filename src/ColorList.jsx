@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Color from './Color';
+import { useColors } from './hooks';
 
-export default function ColorList({
-  colors = [],
-  onRemoveColor = (f) => f,
-  onRateColor = (f) => f,
-}) {
+export default function ColorList() {
+  const { colors, removeColor, rateColor } = useColors();
+
   if (!colors.length) return <div>No Colors Listed. (Add a Color)</div>;
 
+  // const onRateColor = (id, rating) => {
+  //   // const newRate = rate.filter(rating => rating.id !== id)
+  //   const newColors = colors.map((color) => (color.id === id ? { ...color, rating } : color));
+  //   //setColors(newColors);
+  // };
+  // const onRemoveColor = (id) => {
+  //   const newColors = colors.filter((color) => color.id !== id);
+  //   // setColors(newColors);
+  // };
+
   return (
-    <div>
+    <div className="color-list">
       {colors.map((color) => (
         <Color
           key={color.id}
@@ -19,8 +28,8 @@ export default function ColorList({
           rating={color.rating}
           // onRateColor={onRateColor}
           // WRONG - Must name onRate, as that's how <Color /> defines it.
-          onRate={onRateColor}
-          onRemove={onRemoveColor}
+          onRemove={removeColor}
+          onRate={rateColor}
         />
       ))}
     </div>
