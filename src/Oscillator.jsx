@@ -8,13 +8,16 @@ export default function Oscillator() {
   const osc = audio.createOscillator();
 
   const play = () => {
-    osc.start(audio.currentTime);
-    osc.stop(audio.currentTime + 2);
-    addNode(osc);
-    addNode(audio.destination);
+    console.log(osc);
+    osc.start();
+    // osc.stop(audio.currentTime + 2);
+    // addNode(osc);
+    // addNode(audio.destination);
   };
 
   const stop = () => {
+    console.log(osc);
+    osc.frequency.setValueAtTime(osc.frequency.value + 100, audio.currentTime);
     osc.stop();
   };
 
@@ -22,13 +25,13 @@ export default function Oscillator() {
     addNode(osc);
   };
 
-  // const pitchUp = () => {
-  //   osc.frequency.setValueAtTime(osc.frequency.value + 10, audio.currentTime);
-  // };
+  const pitchUp = () => {
+    osc.frequency.setValueAtTime(osc.frequency.value + 10, audio.currentTime);
+  };
 
-  // const pitchDown = () => {
-  //   osc.frequency.setValueAtTime(osc.frequency.value - 10, audio.currentTime);
-  // };
+  const pitchDown = () => {
+    osc.frequency.setValueAtTime(osc.frequency.value - 10, audio.currentTime);
+  };
 
   return (
     <div className="color-list">
@@ -39,12 +42,12 @@ export default function Oscillator() {
       <button type="submit" onClick={stop}>
         Stop
       </button>
-      {/* <button type="submit" onClick={pitchUp}>
+      <button type="submit" onClick={pitchUp}>
         F +
       </button>
       <button type="submit" onClick={pitchDown}>
         F -
-      </button> */}
+      </button>
       <button type="submit" onClick={addOsc}>
         Add!
       </button>

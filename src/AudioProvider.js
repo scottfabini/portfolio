@@ -25,9 +25,10 @@ export default function AudioProvider({ children }) {
   const chainNodes = () => {
     const src1 = nodes[Object.keys(nodes)[0]];
     const src2 = nodes[Object.keys(nodes)[1]];
+    console.log(src1);
+    console.log(src2);
     src1.connect(src2);
-    src1.start(audio.currentTime);
-    src1.stop(audio.currentTime + 2);
+    console.log(src1.frequency.value);
   };
 
   const reportNodes = () => {
