@@ -1,9 +1,8 @@
-import React, { createContext, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
-import ColorProvider from './hooks';
-import colorData from './color-data';
+import ColorProvider from './hooks.jsx';
 import * as serviceWorker from './serviceWorker';
 
 // ReactDOM.render(
