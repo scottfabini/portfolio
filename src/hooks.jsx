@@ -1,7 +1,7 @@
 import React, { useState, createContext, useContext } from 'react';
-import colorData from './color-data.json';
 import { v4 } from 'uuid';
 import { PropTypes } from 'prop-types';
+import colorData from './color-data.json';
 
 // useInput returns [ {value, onChange()}, resetValue() ]
 // So the value, a function to change the value, and a function to reset back to the initial value
