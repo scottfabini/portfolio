@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
+import ColorProvider from './hooks.jsx';
 import * as serviceWorker from './serviceWorker';
 import AudioProvider from './AudioProvider';
 
@@ -18,9 +19,11 @@ import AudioProvider from './AudioProvider';
 ReactDOM.render(
   [
     <React.StrictMode>
-      <AudioProvider>
-        <App />
-      </AudioProvider>
+      <ColorProvider>
+        <AudioProvider>
+          <App />
+        </AudioProvider>
+      </ColorProvider>
     </React.StrictMode>,
   ],
   document.getElementById('root'),
