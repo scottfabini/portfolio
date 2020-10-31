@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './product/product.css';
+import './carousel/carousel.css';
 import './assets/dist/css/bootstrap.min.css';
 import susan from './images/susan.png';
 import apptbook from './images/apptbook.png';
@@ -32,7 +33,73 @@ ReactDOM.render(
         <i className="fa fa-bars" aria-hidden="true"></i>
       </div>
       {/* <!-- End #mobile-menu-toggle --> */}
+      {/* <head> */}
+      {/* <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+        <meta name="generator" content="Jekyll v4.1.1" />
+        <title>Carousel Template · Bootstrap</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/" /> */}
+
+      {/* <!-- Bootstrap core CSS --> */}
+      {/* <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" /> */}
+
+      {/* <!-- Custom styles for this template --> */}
+      {/* <link href="carousel/carousel.css" rel="stylesheet" /> */}
+      {/* </head> */}
       <header>
+        {/* <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> */}
+        <nav className="navbar navbar-custom navbar-expand-md navbar-dark">
+          <a className="navbar-brand" href="#!">
+            Carousel
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarCollapse">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <a className="nav-link" href="#!">
+                  Home <span className="sr-only">(current)</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#!">
+                  Link
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link disabled" href="#!" tabIndex="-1" aria-disabled="true">
+                  Disabled
+                </a>
+              </li>
+            </ul>
+            <form className="form-inline mt-2 mt-md-0">
+              <input
+                className="form-control mr-sm-2"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </nav>
+      </header>
+
+      {/* <header>
         <div id="mobile-menu-close">
           <span>Close</span> <i className="fa fa-times" aria-hidden="true"></i>
         </div>
@@ -56,7 +123,7 @@ ReactDOM.render(
             <a href="#contact">Contact</a>
           </li>
         </ul>
-      </header>
+      </header> */}
       {/* <!-- End header --> */}
 
       <div id="lead">
@@ -318,175 +385,505 @@ ReactDOM.render(
       </div>
       {/* <!-- End #contact --> */}
 
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
-        <meta name="generator" content="Jekyll v4.1.1" />
-        <title>Product example · Bootstrap</title>
+      {/* <head> */}
+      {/* <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta name="description" content="" />
+          <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+          <meta name="generator" content="Jekyll v4.1.1" />
+          <title>Product example · Bootstrap</title>
 
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/" />
+          <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/" /> */}
 
-        {/* <!-- Bootstrap core CSS --> */}
-        {/* <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet" /> */}
-        {/* <link href="./product/product.css" rel="stylesheet" /> */}
-      </head>
-      <body>
-        <nav className="site-header sticky-top py-1">
-          <div className="container d-flex flex-column flex-md-row justify-content-between">
-            <a className="py-2" href="#!" aria-label="Product">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="d-block mx-auto"
-                role="img"
-                viewBox="0 0 24 24"
-                focusable="false"
-              >
-                <title>Product</title>
-                <circle cx="12" cy="12" r="10" />
-                <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-              </svg>
-            </a>
-            <a className="py-2 d-none d-md-inline-block" href="#!">
-              Tour
-            </a>
-            <a className="py-2 d-none d-md-inline-block" href="#!">
-              Product
-            </a>
-            <a className="py-2 d-none d-md-inline-block" href="#!">
-              Features
-            </a>
-            <a className="py-2 d-none d-md-inline-block" href="#!">
-              Enterprise
-            </a>
-            <a className="py-2 d-none d-md-inline-block" href="#!">
-              Support
-            </a>
-            <a className="py-2 d-none d-md-inline-block" href="#!">
-              Pricing
-            </a>
-            <a className="py-2 d-none d-md-inline-block" href="#!">
-              Cart
-            </a>
-          </div>
-        </nav>
-
-        <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-          <div className="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 className="display-4 font-weight-normal">Punny headline</h1>
-            <p className="lead font-weight-normal">
-              And an even wittier subheading to boot. Jumpstart your marketing efforts with this
-              example based on Apple’s marketing pages.
-            </p>
-            <a className="btn btn-outline-secondary" href="#!">
-              Coming soon
-            </a>
-          </div>
-          <div className="product-device shadow-sm d-none d-md-block"></div>
-          <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+      {/* <!-- Bootstrap core CSS --> */}
+      {/* <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet" /> */}
+      {/* <link href="./product/product.css" rel="stylesheet" /> */}
+      {/* </head> */}
+      <nav className="site-header sticky-top py-1">
+        <div className="container d-flex flex-column flex-md-row justify-content-between">
+          <a className="py-2" href="#!" aria-label="Product">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="d-block mx-auto"
+              role="img"
+              viewBox="0 0 24 24"
+              focusable="false"
+            >
+              <title>Product</title>
+              <circle cx="12" cy="12" r="10" />
+              <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+            </svg>
+          </a>
+          <a className="py-2 d-none d-md-inline-block" href="#!">
+            Tour
+          </a>
+          <a className="py-2 d-none d-md-inline-block" href="#!">
+            Product
+          </a>
+          <a className="py-2 d-none d-md-inline-block" href="#!">
+            Features
+          </a>
+          <a className="py-2 d-none d-md-inline-block" href="#!">
+            Enterprise
+          </a>
+          <a className="py-2 d-none d-md-inline-block" href="#!">
+            Support
+          </a>
+          <a className="py-2 d-none d-md-inline-block" href="#!">
+            Pricing
+          </a>
+          <a className="py-2 d-none d-md-inline-block" href="#!">
+            Cart
+          </a>
         </div>
+      </nav>
 
-        <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-          <div className="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div className="my-3 py-3">
-              <h2 className="display-5">Another headline</h2>
-              <p className="lead">And an even wittier subheading.</p>
-            </div>
-            <div
-              className="bg-light shadow-sm mx-auto"
-              style={{ width: '80%', height: '300px' }}
-            ></div>
-          </div>
-          <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div className="my-3 p-3">
-              <h2 className="display-5">Another headline</h2>
-              <p className="lead">And an even wittier subheading.</p>
-            </div>
-            <div
-              className="bg-dark shadow-sm mx-auto"
-              style={{ width: '80%', height: '300px' }}
-            ></div>
-          </div>
+      <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div className="col-md-5 p-lg-5 mx-auto my-5">
+          <h1 className="display-4 font-weight-normal">Punny headline</h1>
+          <p className="lead font-weight-normal">
+            And an even wittier subheading to boot. Jumpstart your marketing efforts with this
+            example based on Apple’s marketing pages.
+          </p>
+          <a className="btn btn-outline-secondary" href="#!">
+            Coming soon
+          </a>
         </div>
+        <div className="product-device shadow-sm d-none d-md-block"></div>
+        <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+      </div>
 
-        <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-          <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div className="my-3 p-3">
-              <h2 className="display-5">Another headline</h2>
-              <p className="lead">And an even wittier subheading.</p>
-            </div>
-            <div
-              className="bg-dark shadow-sm mx-auto"
-              style={{ width: '80%', height: '300px' }}
-            ></div>
+      <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div className="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+          <div className="my-3 py-3">
+            <h2 className="display-5">Another headline</h2>
+            <p className="lead">And an even wittier subheading.</p>
           </div>
-          <div className="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div className="my-3 py-3">
-              <h2 className="display-5">Another headline</h2>
-              <p className="lead">And an even wittier subheading.</p>
-            </div>
-            <div
-              className="bg-light shadow-sm mx-auto"
-              style={{ width: '80%', height: '300px' }}
-            ></div>
-          </div>
+          <div
+            className="bg-light shadow-sm mx-auto"
+            style={{ width: '80%', height: '300px' }}
+          ></div>
         </div>
+        <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="my-3 p-3">
+            <h2 className="display-5">Another headline</h2>
+            <p className="lead">And an even wittier subheading.</p>
+          </div>
+          <div
+            className="bg-dark shadow-sm mx-auto"
+            style={{ width: '80%', height: '300px' }}
+          ></div>
+        </div>
+      </div>
 
-        <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-          <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div className="my-3 p-3">
-              <h2 className="display-5">Another headline</h2>
-              <p className="lead">And an even wittier subheading.</p>
-            </div>
-            <div
-              className="bg-white shadow-sm mx-auto"
-              style={{ width: '80%', height: '300px' }}
-            ></div>
+      <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="my-3 p-3">
+            <h2 className="display-5">Another headline</h2>
+            <p className="lead">And an even wittier subheading.</p>
           </div>
-          <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div className="my-3 py-3">
-              <h2 className="display-5">Another headline</h2>
-              <p className="lead">And an even wittier subheading.</p>
-            </div>
-            <div
-              className="bg-white shadow-sm mx-auto"
-              style={{ width: '80%', height: '300px' }}
-            ></div>
-          </div>
+          <div
+            className="bg-dark shadow-sm mx-auto"
+            style={{ width: '80%', height: '300px' }}
+          ></div>
         </div>
+        <div className="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+          <div className="my-3 py-3">
+            <h2 className="display-5">Another headline</h2>
+            <p className="lead">And an even wittier subheading.</p>
+          </div>
+          <div
+            className="bg-light shadow-sm mx-auto"
+            style={{ width: '80%', height: '300px' }}
+          ></div>
+        </div>
+      </div>
 
-        <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-          <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div className="my-3 p-3">
-              <h2 className="display-5">Another headline</h2>
-              <p className="lead">And an even wittier subheading.</p>
-            </div>
-            <div
-              className="bg-white shadow-sm mx-auto"
-              style={{ width: '80%', height: '300px' }}
-            ></div>
+      <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="my-3 p-3">
+            <h2 className="display-5">Another headline</h2>
+            <p className="lead">And an even wittier subheading.</p>
           </div>
-          <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div className="my-3 py-3">
-              <h2 className="display-5">Another headline</h2>
-              <p className="lead">And an even wittier subheading.</p>
-            </div>
-            <div
-              className="bg-white shadow-sm mx-auto"
-              style={{ width: '80%', height: '300px' }}
-            ></div>
-          </div>
+          <div
+            className="bg-white shadow-sm mx-auto"
+            style={{ width: '80%', height: '300px' }}
+          ></div>
         </div>
-      </body>
+        <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="my-3 py-3">
+            <h2 className="display-5">Another headline</h2>
+            <p className="lead">And an even wittier subheading.</p>
+          </div>
+          <div
+            className="bg-white shadow-sm mx-auto"
+            style={{ width: '80%', height: '300px' }}
+          ></div>
+        </div>
+      </div>
+
+      <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="my-3 p-3">
+            <h2 className="display-5">Another headline</h2>
+            <p className="lead">And an even wittier subheading.</p>
+          </div>
+          <div
+            className="bg-white shadow-sm mx-auto"
+            style={{ width: '80%', height: '300px' }}
+          ></div>
+        </div>
+        <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="my-3 py-3">
+            <h2 className="display-5">Another headline</h2>
+            <p className="lead">And an even wittier subheading.</p>
+          </div>
+          <div
+            className="bg-white shadow-sm mx-auto"
+            style={{ width: '80%', height: '300px' }}
+          ></div>
+        </div>
+      </div>
       {/* </html> */}
+
+      <main role="main">
+        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          <ol className="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <svg
+                className="bd-placeholder-img"
+                width="100%"
+                height="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+              >
+                <rect width="100%" height="100%" fill="#777" />
+              </svg>
+              <div className="container">
+                <div className="carousel-caption text-left">
+                  <h1>Example headline.</h1>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non
+                    mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
+                    elit.
+                  </p>
+                  <p>
+                    <a className="btn btn-lg btn-primary" href="#!" role="button">
+                      Sign up today
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <svg
+                className="bd-placeholder-img"
+                width="100%"
+                height="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+              >
+                <rect width="100%" height="100%" fill="#777" />
+              </svg>
+              <div className="container">
+                <div className="carousel-caption">
+                  <h1>Another example headline.</h1>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non
+                    mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
+                    elit.
+                  </p>
+                  <p>
+                    <a className="btn btn-lg btn-primary" href="#!" role="button">
+                      Learn more
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <svg
+                className="bd-placeholder-img"
+                width="100%"
+                height="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+              >
+                <rect width="100%" height="100%" fill="#777" />
+              </svg>
+              <div className="container">
+                <div className="carousel-caption text-right">
+                  <h1>One more for good measure.</h1>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non
+                    mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
+                    elit.
+                  </p>
+                  <p>
+                    <a className="btn btn-lg btn-primary" href="#!" role="button">
+                      Browse gallery
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="sr-only">Previous</span>
+          </a>
+          <a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="sr-only">Next</span>
+          </a>
+        </div>
+
+        {/* <!-- Marketing messaging and featurettes */}
+        {/* ================================================== --> */}
+        {/* <!-- Wrap the rest of the page in another container to center all the content. --> */}
+
+        <div className="container marketing">
+          {/* <!-- Three columns of text below the carousel --> */}
+          <div className="row">
+            <div className="col-lg-4">
+              <svg
+                className="bd-placeholder-img rounded-circle"
+                width="140"
+                height="140"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 140x140"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777" />
+                <text x="50%" y="50%" fill="#777" dy=".3em">
+                  140x140
+                </text>
+              </svg>
+              <h2>Heading</h2>
+              <p>
+                Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor
+                id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
+                vestibulum at eros. Praesent commodo cursus magna.
+              </p>
+              <p>
+                <a className="btn btn-secondary" href="#!" role="button">
+                  View details &raquo;
+                </a>
+              </p>
+            </div>
+            {/* <!-- /.col-lg-4 --> */}
+            <div className="col-lg-4">
+              <svg
+                className="bd-placeholder-img rounded-circle"
+                width="140"
+                height="140"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 140x140"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777" />
+                <text x="50%" y="50%" fill="#777" dy=".3em">
+                  140x140
+                </text>
+              </svg>
+              <h2>Heading</h2>
+              <p>
+                Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
+                sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus,
+                tellus ac cursus commodo, tortor mauris condimentum nibh.
+              </p>
+              <p>
+                <a className="btn btn-secondary" href="#!" role="button">
+                  View details &raquo;
+                </a>
+              </p>
+            </div>
+            {/* <!-- /.col-lg-4 --> */}
+            <div className="col-lg-4">
+              <svg
+                className="bd-placeholder-img rounded-circle"
+                width="140"
+                height="140"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 140x140"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777" />
+                <text x="50%" y="50%" fill="#777" dy=".3em">
+                  140x140
+                </text>
+              </svg>
+              <h2>Heading</h2>
+              <p>
+                Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus
+                commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              </p>
+              <p>
+                <a className="btn btn-secondary" href="#!" role="button">
+                  View details &raquo;
+                </a>
+              </p>
+            </div>
+            {/* <!-- /.col-lg-4 --> */}
+          </div>
+          {/* <!-- /.row --> */}
+
+          {/* <!-- START THE FEATURETTES --> */}
+
+          <hr className="featurette-divider" />
+
+          <div className="row featurette">
+            <div className="col-md-7">
+              <h2 className="featurette-heading">
+                First featurette heading. <span className="text-muted">It’ll blow your mind.</span>
+              </h2>
+              <p className="lead">
+                Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Fusce dapibus, tellus ac cursus commodo.
+              </p>
+            </div>
+            <div className="col-md-5">
+              <svg
+                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                width="500"
+                height="500"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 500x500"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee" />
+                <text x="50%" y="50%" fill="#aaa" dy=".3em">
+                  500x500
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <hr className="featurette-divider" />
+
+          <div className="row featurette">
+            <div className="col-md-7 order-md-2">
+              <h2 className="featurette-heading">
+                Oh yeah, it’s that good. <span className="text-muted">See for yourself.</span>
+              </h2>
+              <p className="lead">
+                Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Fusce dapibus, tellus ac cursus commodo.
+              </p>
+            </div>
+            <div className="col-md-5 order-md-1">
+              <svg
+                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                width="500"
+                height="500"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 500x500"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee" />
+                <text x="50%" y="50%" fill="#aaa" dy=".3em">
+                  500x500
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <hr className="featurette-divider" />
+
+          <div className="row featurette">
+            <div className="col-md-7">
+              <h2 className="featurette-heading">
+                And lastly, this one. <span className="text-muted">Checkmate.</span>
+              </h2>
+              <p className="lead">
+                Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Fusce dapibus, tellus ac cursus commodo.
+              </p>
+            </div>
+            <div className="col-md-5">
+              <svg
+                className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                width="500"
+                height="500"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: 500x500"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee" />
+                <text x="50%" y="50%" fill="#aaa" dy=".3em">
+                  500x500
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <hr className="featurette-divider" />
+
+          {/* <!-- /END THE FEATURETTES --> */}
+        </div>
+        {/* <!-- /.container --> */}
+
+        {/* <!-- FOOTER --> */}
+        <footer className="container">
+          <p className="float-right">
+            <a href="#!">Back to top</a>
+          </p>
+          <p>
+            &copy; 2017-2020 Company, Inc. &middot; <a href="#!">Privacy</a> &middot;{' '}
+            <a href="#!">Terms</a>
+          </p>
+        </footer>
+      </main>
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossOrigin="anonymous"
+      ></script>
+      <script>
+        window.jQuery || document.write('
+        <script src="../assets/js/vendor/jquery.slim.min.js" />
+      </script>
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
       <ColorProvider>
         <AudioProvider>

@@ -125,7 +125,7 @@ body.active {
   background: #fff;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #dcd9d9;
+  border: 100px solid #dcd9d9;
 }
 .no-js #experience-timeline > div h3 {
   font-size: 1.5em;
@@ -187,7 +187,7 @@ header {
 }
 header ul {
   display: inline-block;
-  background: #fff;
+  /* background: #fff; */
   text-align: center;
   padding: 10px;
   margin: 0;
@@ -472,8 +472,8 @@ footer {
   content: '';
   top: 0;
   bottom: 0;
-  left: 303px;
-  right: auto;
+  left: auto;
+  right: 0px;
   height: 100%;
   width: 3px;
   background: #3498db;
@@ -488,7 +488,7 @@ footer {
   background: -webkit-linear-gradient(top, #3498db, rgba(52, 152, 219, 0));
   background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0));
   top: 100%;
-  left: 303px;
+  right: 0px;
 }
 .vtimeline-content {
   margin-left: 350px;
@@ -837,4 +837,38 @@ footer {
     font-size: 0.9em;
     padding: 5px 10px;
   }
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.navbar-custom {
+  background-color: rgba(33, 125, 187, 1);
+  /* background-color: #ff5500; */
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #ffffff;
 }
