@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import Oscillator from './Oscillator';
 import Output from './Output';
 import ColorList from './ColorList';
