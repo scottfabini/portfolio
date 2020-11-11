@@ -13,9 +13,9 @@ ReactDOM.render(
   [
     <React.StrictMode>
       <Provider theme={defaultTheme}>
-        <Navbar />
-        <Router />
         <OldWebsite />
+        {/* <Navbar /> */}
+        <Router />
       </Provider>
     </React.StrictMode>,
   ],

@@ -345,7 +345,7 @@ footer {
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  background: url(lead-bg.jpg);
+  background: url(../lead-bg.jpg);
   background-size: cover;
   padding: 15px;
   overflow: hidden;
@@ -653,7 +653,6 @@ footer {
 }
 #contact {
   padding: 50px 15px;
-  background: #3498db;
   text-align: center;
 }
 #contact h2 {
@@ -673,7 +672,6 @@ footer {
   border-radius: 4px;
   border: none;
   margin-bottom: 10px;
-  background: #1d6fa5;
   color: #fff;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
