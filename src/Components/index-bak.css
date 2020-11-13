@@ -605,9 +605,9 @@ footer {
   background: #fff;
   border-radius: 4px;
 }
-.project-image {
+/* .project-image {
   float: left;
-}
+} */
 .project-info {
   position: absolute;
   top: 50%;

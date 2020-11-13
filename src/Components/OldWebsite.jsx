@@ -4,11 +4,7 @@ import './index-bak.css';
 import '../product/product.css';
 import '../carousel/carousel.css';
 import '../assets/dist/css/bootstrap.min.css';
-import susan from '../images/susan.png';
-import apptbook from '../images/apptbook.png';
-import gomoku from '../images/gomoku-play3.png';
-import rollingstone from '../images/react-rolling-stone.png';
-import svmcurves from '../images/svm-curves.png';
+
 import App from '../App.jsx';
 import Bootstrap from './Bootstrap';
 import Spectrum from './Spectrum';
@@ -16,132 +12,20 @@ import ColorProvider from '../hooks.jsx';
 // import * as serviceWorker from '../serviceWorker';
 import AudioProvider from '../AudioProvider';
 import Lead from './Lead';
+import About from './About';
+import Projects from './Projects';
 // import React, { useState } from 'react';
-import { Flex, View } from '@adobe/react-spectrum';
+import { Flex, View, Grid, Image, repeat } from '@adobe/react-spectrum';
+import Media from 'react-media';
 import Beaker from '@spectrum-icons/workflow/Beaker';
 
 export default function OldWebsite() {
   return (
     <>
       <Lead />
-      <div id="about">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4">
-              <h2 className="heading">About Me</h2>
-            </div>
-            <div className="col-md-8">
-              <p>
-                I am a recent graduate with a Masters in Computer Science from Portland State
-                University, where I focused on full stack web development and software design
-                methodologies. I also have 15 years of experience with systems architecture and
-                product line management of computing systems, primarily on the hardware side. From
-                design and specification, to managing the business-side of product development, I've
-                done it all. Now I'm looking for an entry level position on the software side, where
-                I can further hone my skill while delivering results for an organization.
-              </p>
-              <br />
-              <a href="https://www.linkedin.com/in/scott-fabini/">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* <!-- End #about --> */}
-      <div id="projects" className="background-alt">
-        <h2 className="heading">Projects</h2>
-        <div className="container">
-          <div className="row">
-            <div className="project shadow-large">
-              <div className="project-image">
-                <a href="images/susan.png">
-                  <img alt="Susan B. Anthony" src={susan} width="300" height="300" />
-                </a>
-              </div>
-              <div className="project-info">
-                <h3>Android: An Interview With Susan B. Anthony</h3>
-                <p>1st place in www.avios.org competition.</p>
-                <p>
-                  Panelists expressed delight with the voice-driven UI and learning more about
-                  Susan.
-                </p>
-                <a href="https://github.com/trvank/Interview_Susan_B_Anthony/releases">APK</a>
-                <br />
-                <a href="https://github.com/trvank/Interview_Susan_B_Anthony">Github</a>
-              </div>
-            </div>
+      <About />
+      <Projects />
 
-            <div className="project shadow-large">
-              <div className="project-image">
-                <a href="./images/apptbook.png">
-                  <img width="300" height="300" src={apptbook} />
-                </a>
-              </div>
-              <div className="project-info">
-                <h3>Client-Server Web Calendar</h3>
-                <p>
-                  Server built on Node.js, running on AWS EC2 instance. Client uses jQuery, and
-                  HTTP/REST and JSON for data transfer.
-                </p>
-                <a href="http://ec2-35-162-215-133.us-west-2.compute.amazonaws.com:8080/">
-                  Website
-                </a>
-                <br />
-                <a href="https://github.com/scottfabini/apptbook">Github</a>
-              </div>
-            </div>
-
-            <div className="project shadow-large">
-              <div className="project-image">
-                <a href="./images/react-rolling-stone.png">
-                  <img alt="react rolling stone" width="300" height="300" src={rollingstone} />
-                </a>
-              </div>
-              <div className="project-info">
-                <h3>React: Albums</h3>
-                <p>
-                  React website with support for reactive sorting, ratings, and item modification.
-                </p>
-                <a href="https://web.cecs.pdx.edu/~sfabini/album-notes/">Website</a>
-                <br />
-                <a href="https://github.com/scottfabini/album-notes">Github</a>
-              </div>
-            </div>
-
-            <div className="project shadow-large">
-              <div className="project-image">
-                <a href="images/gomoku-play.png">
-                  <img alt="Gomoku Game" width="300" height="300" src={gomoku} />
-                </a>
-              </div>
-              <div className="project-info">
-                <h3>Android: Gomoku</h3>
-                <p>
-                  "Connect-5" on a Go Board. Support for Bluetooth and Wi-Fi via Google Play
-                  Services.
-                </p>
-                <a href="https://play.google.com/store/apps/details?id=com.gomuku.rs.gomuku&hl=en">
-                  APK
-                </a>
-                <br />
-                <a href="https://github.com/tsundin/CS454Group6_Gomoku">Github</a>
-              </div>
-            </div>
-
-            <div className="project shadow-large">
-              <div className="project-image">
-                <a href="images/svm-curves.png">
-                  <img alt="SVM Curves" width="300" height="300" src={svmcurves} />
-                </a>
-              </div>
-              <div className="project-info">
-                <h3>Machine Learning: SVM</h3>
-                <p>Support Vector Machine learns to classify spam based on 57 features.</p>
-                <a href="https://github.com/scottfabini/machine-learning-perceptron">Github</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* <!-- End #projects --> */}
       <div id="skills">
         <h2 className="heading">Skills</h2>
