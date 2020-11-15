@@ -7,15 +7,17 @@ import { Provider, defaultTheme } from '@adobe/react-spectrum';
 import { Image, Flex, View, Item, Header, ActionButton, Breadcrumbs } from '@adobe/react-spectrum';
 import Navbar from './Components/Navbar';
 import OldWebsite from './Components/OldWebsite';
-import Router from './Components/Router';
+import ComplexRouter from './Components/ComplexRouter';
 
 ReactDOM.render(
   [
     <React.StrictMode>
       <Provider theme={defaultTheme}>
-        <OldWebsite />
+        {/* <ComplexRouter /> */}
+        <Navbar />
+        {/* <OldWebsite /> */}
         {/* <Navbar /> */}
-        <Router />
+        {/* <Router /> */}
       </Provider>
     </React.StrictMode>,
   ],

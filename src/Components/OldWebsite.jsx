@@ -23,11 +23,11 @@ export default function OldWebsite() {
       <Education />
       <Experience />
       <Contact />
-      <ColorProvider>
+      {/* <ColorProvider>
         <AudioProvider>
           <App />
         </AudioProvider>
-      </ColorProvider>
+      </ColorProvider> */}
     </>
   );
 }

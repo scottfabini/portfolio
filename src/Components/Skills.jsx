@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function About() {
+export default function Skills() {
   return (
     <div id="skills">
       <h2 className="heading">Skills</h2>
