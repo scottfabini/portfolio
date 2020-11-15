@@ -8,16 +8,13 @@ import { Image, Flex, View, Item, Header, ActionButton, Breadcrumbs } from '@ado
 import Navbar from './Components/Navbar';
 import OldWebsite from './Components/OldWebsite';
 import ComplexRouter from './Components/ComplexRouter';
+// import { AudioProvider } from './audio-hooks';
 
 ReactDOM.render(
   [
     <React.StrictMode>
       <Provider theme={defaultTheme}>
-        {/* <ComplexRouter /> */}
         <Navbar />
-        {/* <OldWebsite /> */}
-        {/* <Navbar /> */}
-        {/* <Router /> */}
       </Provider>
     </React.StrictMode>,
   ],

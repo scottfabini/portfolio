@@ -1,58 +1,73 @@
 import React, { useState } from 'react';
 import { useAudio } from './AudioProvider';
+import * as Tone from 'tone';
 
 export default function Oscillator() {
-  // const { audio } = useAudio();
   const { audio, addNode, chainNodes } = useAudio();
 
   const osc = audio.createOscillator();
 
-  const play = () => {
-    console.log(osc);
-    osc.start();
-    // osc.stop(audio.currentTime + 2);
+  const one = () => {
+    const synth = new Tone.Synth().toDestination();
+    //play a middle 'C' for the duration of an 8th note
+    synth.triggerAttackRelease('C4', '8n');
+  };
+
+  const two = () => {
+    const synth = new Tone.Synth().toDestination();
+    //play a middle 'C' for the duration of an 8th note
+    synth.triggerAttackRelease('D4', '8n');
+  };
+
+  const three = () => {
+    const synth = new Tone.Synth().toDestination();
+    //play a middle 'C' for the duration of an 8th note
+    synth.triggerAttackRelease('E4', '8n');
+
+    // osc.frequency.setValueAtTime(osc.frequency.value + 10, audio.currentTime);
     // addNode(osc);
-    // addNode(audio.destination);
   };
 
-  const stop = () => {
-    console.log(osc);
-    osc.frequency.setValueAtTime(osc.frequency.value + 100, audio.currentTime);
-    osc.stop();
+  const four = () => {
+    const synth = new Tone.Synth().toDestination();
+    //play a middle 'C' for the duration of an 8th note
+    synth.triggerAttackRelease('F4', '8n');
   };
 
-  const addOsc = () => {
-    addNode(osc);
+  const five = () => {
+    const synth = new Tone.Synth().toDestination();
+    //play a middle 'C' for the duration of an 8th note
+    synth.triggerAttackRelease('G4', '8n');
+    // osc.frequency.setValueAtTime(osc.frequency.value - 10, audio.currentTime);
   };
 
-  const pitchUp = () => {
-    osc.frequency.setValueAtTime(osc.frequency.value + 10, audio.currentTime);
-  };
-
-  const pitchDown = () => {
-    osc.frequency.setValueAtTime(osc.frequency.value - 10, audio.currentTime);
+  const six = () => {
+    const synth = new Tone.Synth().toDestination();
+    //play a middle 'C' for the duration of an 8th note
+    synth.triggerAttackRelease('A4', '8n');
+    // osc.frequency.setValueAtTime(osc.frequency.value - 10, audio.currentTime);
   };
 
   return (
     <div className="color-list">
       <h1>Oscillator</h1>
-      <button type="submit" onClick={play}>
-        Play
+      <button type="submit" onClick={one}>
+        1
       </button>
-      <button type="submit" onClick={stop}>
-        Stop
+      <button type="submit" onClick={two}>
+        2
       </button>
-      <button type="submit" onClick={pitchUp}>
-        F +
+      <button type="submit" onClick={three}>
+        3
       </button>
-      <button type="submit" onClick={pitchDown}>
-        F -
+      <button type="submit" onClick={four}>
+        4
       </button>
-      <button type="submit" onClick={addOsc}>
-        Add!
+      <button type="submit" onClick={five}>
+        5
       </button>
-      <button type="submit" onClick={chainNodes}>
-        Connect!
+      <button type="submit" onClick={six}>
+        6
       </button>
     </div>
   );
