@@ -7,9 +7,9 @@ import ColorList from './ColorList';
 function App() {
   return (
     <div className="App">
-      <ColorList></ColorList>
-      <Oscillator />
-      <Output />
+      {/* <ColorList></ColorList>
+      <Oscillator /> */}
+      {/* <Output /> */}
     </div>
   );
 }
