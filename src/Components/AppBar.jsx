@@ -27,7 +27,7 @@ export default function AppBar() {
         collapseOnSelect
         expand="lg"
         // bg="transparent"
-        // variant="light"
+        variant="light"
       >
         <Navbar.Brand href="#home">Scott Fabini</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
