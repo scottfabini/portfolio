@@ -1,7 +1,5 @@
 import React from 'react';
-import './index-bak.css';
 import '../assets/dist/css/bootstrap.min.css';
-
 import App from '../App.jsx';
 import ColorProvider from '../hooks.jsx';
 import AudioProvider from '../AudioProvider';
@@ -12,6 +10,7 @@ import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
 import Contact from './Contact';
+import './oldWebsite.css';
 
 export default function OldWebsite() {
   return (

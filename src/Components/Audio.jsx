@@ -1,5 +1,4 @@
 import React from 'react';
-import './index-bak.css';
 import '../assets/dist/css/bootstrap.min.css';
 
 import App from '../App.jsx';

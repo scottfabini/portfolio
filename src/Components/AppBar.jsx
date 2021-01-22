@@ -11,17 +11,96 @@ import {
   useRouteMatch,
   useParams,
 } from 'react-router-dom';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import ComplexRouter from './ComplexRouter';
 import OldWebsite from './OldWebsite';
 import Audio from './Audio';
+import AppBarRouter from './AppBarRouter';
+import '../index.css';
 
-export default function Navbar() {
-  let [submittedText, setSubmittedText] = React.useState();
-  let [currentText, setCurrentText] = React.useState();
+export default function AppBar() {
+  // let [submittedText, setSubmittedText] = React.useState();
+  // let [currentText, setCurrentText] = React.useState();
   return (
     <>
-      <ComplexRouter />
-      <Router>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        // bg="transparent"
+        // variant="light"
+      >
+        <Navbar.Brand href="#home">Scott Fabini</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/projects">Projects</Nav.Link>
+            {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            </NavDropdown> */}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <AppBarRouter />
+
+      {/* <nav className="navbar navbar-custom navbar-expand-md navbar-dark">
+        <a className="navbar-brand" href="#!">
+          Scott Fabini
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <Router>
+          <>
+            <Route path="/about" component={About} />
+            <Route path="/users" component={Users} />
+            <Route path="/contact" component={Contact} />
+          </>
+          <div className="collapse navbar-collapse" id="navbarCollapse">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <Link>
+                  <RouterLink to="/">Home</RouterLink>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link>
+                  <RouterLink to="/about">Audio</RouterLink>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link>
+                  <RouterLink to="/users">Users</RouterLink>
+                </Link>
+              </li>
+            </ul>
+            <form className="form-inline mt-2 mt-md-0">
+              <input
+                className="form-control mr-sm-2"
+                type="text"
+                placeholder="Placeholder"
+                aria-label="Search"
+              />
+              <button className="btn my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </Router>
+      </nav> */}
+      {/* <Router>
         <header>
           <nav className="navbar navbar-custom navbar-expand-md navbar-dark">
             <a className="navbar-brand" href="#!">
@@ -50,6 +129,11 @@ export default function Navbar() {
                     <RouterLink to="/about">Audio</RouterLink>
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link>
+                    <RouterLink to="/users">Users</RouterLink>
+                  </Link>
+                </li>
               </ul>
               <form className="form-inline mt-2 mt-md-0">
                 <input
@@ -76,7 +160,7 @@ export default function Navbar() {
             </Route>
           </Switch>
         </header>
-      </Router>
+      </Router> */}
     </>
   );
 }

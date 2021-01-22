@@ -1,15 +1,11 @@
 import React from 'react';
-// import './App.css';
-import Oscillator from './Oscillator';
-import Output from './Output';
-import ColorList from './ColorList';
+// import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import AppBar from './Components/AppBar';
 
 function App() {
   return (
     <div className="App">
-      {/* <ColorList></ColorList>
-      <Oscillator /> */}
-      {/* <Output /> */}
+      <AppBar />
     </div>
   );
 }
