@@ -15,7 +15,7 @@ export default function Projects() {
         <div className="row">
           <div className="project shadow-large">
             <div className="project-image">
-              <a href="images/susan.png">
+              <a href="https://github.com/trvank/Interview_Susan_B_Anthony">
                 <img alt="Susan B. Anthony" src={susan} width="300" height="300" />
               </a>
             </div>
@@ -36,7 +36,7 @@ export default function Projects() {
 
           <div className="project shadow-large">
             <div className="project-image">
-              <a href="./images/apptbook.png">
+              <a href="https://github.com/scottfabini/apptbook">
                 <img width="300" height="300" src={apptbook} />
               </a>
             </div>
@@ -57,7 +57,7 @@ export default function Projects() {
 
           <div className="project shadow-large">
             <div className="project-image">
-              <a href="./images/react-rolling-stone.png">
+              <a href="https://github.com/scottfabini/album-notes">
                 <img alt="react rolling stone" width="300" height="300" src={rollingstone} />
               </a>
             </div>
@@ -77,7 +77,7 @@ export default function Projects() {
 
           <div className="project shadow-large">
             <div className="project-image">
-              <a href="images/gomoku-play.png">
+              <a href="https://github.com/tsundin/CS454Group6_Gomoku">
                 <img alt="Gomoku Game" width="300" height="300" src={gomoku} />
               </a>
             </div>
@@ -99,7 +99,7 @@ export default function Projects() {
 
           <div className="project shadow-large">
             <div className="project-image">
-              <a href="images/svm-curves.png">
+              <a href="https://github.com/scottfabini/machine-learning-perceptron">
                 <img alt="SVM Curves" width="300" height="300" src={svmcurves} />
               </a>
             </div>
