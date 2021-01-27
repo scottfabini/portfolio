@@ -4,7 +4,6 @@ import './assets/dist/css/bootstrap.min.css';
 import App from './App.jsx';
 import * as serviceWorker from './serviceWorker';
 import { Provider, defaultTheme } from '@adobe/react-spectrum';
-// import { AudioProvider } from './audio-hooks';
 
 ReactDOM.render(
   [

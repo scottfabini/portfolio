@@ -1,8 +1,4 @@
 import React from 'react';
-import '../assets/dist/css/bootstrap.min.css';
-import App from '../App.jsx';
-import ColorProvider from '../hooks.jsx';
-import AudioProvider from '../AudioProvider';
 import Lead from './Lead';
 import About from './About';
 import Projects from './Projects';
@@ -22,11 +18,6 @@ export default function OldWebsite() {
       <Education />
       <Experience />
       <Contact />
-      {/* <ColorProvider>
-        <AudioProvider>
-          <App />
-        </AudioProvider>
-      </ColorProvider> */}
     </>
   );
 }

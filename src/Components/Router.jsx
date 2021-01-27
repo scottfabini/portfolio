@@ -4,6 +4,7 @@ import About from './About';
 import Projects from './Projects';
 import OldWebsite from './OldWebsite';
 import Experiments from './Experiments';
+import Template from './Template';
 
 const routes = {
   '/': () => <OldWebsite />,
@@ -13,5 +14,6 @@ const routes = {
   '/contact': () => <Contact />,
   '/contact': () => <Contact />,
   '/experiments': () => <Experiments />,
+  '/template': () => <Template />,
 };
 export default routes;
